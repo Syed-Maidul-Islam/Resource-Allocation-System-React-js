@@ -1,0 +1,91 @@
+/* src/components/ResourceTable.css */
+
+/* General styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Table headers styling */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Table cells styling */
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    opacity: 0; /* Initially hide table cells */
+    transform: translateY(30px); /* Initially position the cells below */
+    animation: fadeInCells 1s forwards; /* Apply fadeInCells animation */
+    animation-delay: 0.2s; /* Add a small delay for cells */
+}
+
+/* Fade-in effect for table cells */
+@keyframes fadeInCells {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce effect for table rows */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply bounceIn animation to each table row */
+tr {
+    animation: bounceIn 0.8s ease-out;
+    animation-delay: 0.2s; /* Add a small delay for rows */
+}
+
+/* Add hover effect to table rows (scaling effect) */
+tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05); /* Slightly scale the row on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container for the table */
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Loading and error message styling */
+.loading,
+.error {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #333;
+}

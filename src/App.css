@@ -1,0 +1,17 @@
+/* General styling for the app */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title of the app */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 20px;
+}
